@@ -73,7 +73,7 @@ body {
 .hero-image-container { width: 100%; height: 70vh; overflow: hidden; }
 .placeholder-img {
     width: 100%; height: 100%;
-    background-size: cover; background-position: center;
+    background-size: cover; background-position: top;
     background-color: #f0f0f0;
 }
 .hero-content { margin-top: 2rem; }

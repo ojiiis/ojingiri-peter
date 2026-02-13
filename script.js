@@ -63,3 +63,29 @@ document.querySelectorAll('.art-card img').forEach(img => {
         resizeGridItem(card);
     });
 });
+
+let start = 0,count = 1, images = [
+    "media/If offering was a place, dogs and chickens will be friends .jpg",
+    "media/If offering was a place, being complete will be a myth.jpg",
+    "media/If offering was a place, goats and chickens will be friends.jpg",
+    "media/If offering was a place, greens would be red .jpg",
+    "media/If offering was a place, horns would be red .jpg",
+    "media/If offering was a place, I will be inside you.jpg",
+    "media/If offering was a place, l will trip for your love.jpg",
+    "media/If offering was a place, our death will be feast.jpg"
+];
+setInterval(()=>{
+    let pos = ["top","center","bottom"];
+   
+    document.getElementsByClassName("placeholder-img")[0].style.backgroundPosition=pos[count];
+    if(count > 2){
+        count = 0;
+        start += 1;
+        document.getElementsByClassName("placeholder-img")[0].style.backgroundPosition=pos[count];
+        document.getElementsByClassName("placeholder-img")[0].style.backgroundImage = "url('"+images[start]+"')";
+        if(start > images.length){
+            start = 0;
+        }
+    }
+    count++;
+},2000);
